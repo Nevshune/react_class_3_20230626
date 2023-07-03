@@ -6,6 +6,7 @@ import SkelretonCharacters from "../components/SkeletonCharacter";
 import Pagination from "react-js-pagination";
 import "./Paging.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import SkeletonPage from "../components/SkeletonPage";
 
 
 
@@ -53,7 +54,7 @@ export default function Characters() {
                 </HStack>
                 {/* 게시판 */}
                 <Grid templateColumns={"repeat(6, 1fr)"} w="full" gap="4">
-                    {isLoading ? <SkelretonCharacters /> : ""}
+                    {isLoading ? <SkeletonPage height="340px" num={numLimit} column="6" /> : ""}
                     {data?.data?.results.map((item, i) => (
 
                         <GridItem w="220px" bg="red.600" role="group">
