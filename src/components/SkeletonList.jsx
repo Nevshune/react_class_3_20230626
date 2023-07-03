@@ -12,4 +12,5 @@ export default function SkelretonList() {
             <Skeleton w="170px" h="240px" />
         </HStack>
     )
+
 }
